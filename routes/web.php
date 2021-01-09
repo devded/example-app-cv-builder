@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UserDashboard;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,10 +16,13 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('index');
-});
+})->middleware(['auth']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
+
+Route::get('/home', [UserDashboard::class,'userInfo']);
+
 
 require __DIR__.'/auth.php';

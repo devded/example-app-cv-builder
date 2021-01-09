@@ -41,7 +41,7 @@
                   <img src="{{ asset('admin-template/assets/images/faces/face28.png') }}" alt="image">
                 </div>
                 <div class="nav-profile-text">
-                  <p class="mb-1 text-black">Henry Klein</p>
+                  <p class="mb-1 text-black">{{ Auth::user()->name }}</p>
                 </div>
               </a>
               <div class="p-0 border-0 dropdown-menu navbar-dropdown dropdown-menu-right font-size-sm" aria-labelledby="profileDropdown" data-x-placement="bottom-end">
@@ -74,7 +74,7 @@
                     <span>Lock Account</span>
                     <i class="ml-1 mdi mdi-lock"></i>
                   </a>
-                  <a class="py-1 dropdown-item d-flex align-items-center justify-content-between" href="#">
+                  <a class="py-1 dropdown-item d-flex align-items-center justify-content-between" href="{{ url('logout') }}">
                     <span>Log Out</span>
                     <i class="ml-1 mdi mdi-logout"></i>
                   </a>
@@ -233,8 +233,9 @@
 
             <li class="nav-item sidebar-user-actions">
               <div class="sidebar-user-menu">
-                <a href="#" class="nav-link"><i class="mdi mdi-logout menu-icon"></i>
-                  <span class="menu-title">Log Out</span></a>
+                <a href="{{ route('logout') }}" class="nav-link"><i class="mdi mdi-logout menu-icon"></i>
+                  <span class="menu-title">Log Out</span>
+                </a>
               </div>
             </li>
           </ul>
