@@ -24,4 +24,9 @@ class UserDashboard extends Controller
     }
 
 
+    public function educationInfo(){
+        return view('')
+    }
+
+
 }

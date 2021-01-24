@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Controllers\UserDashboard;
+use GuzzleHttp\Middleware;
 use Illuminate\Support\Facades\Route;
+use Whoops\Run;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,7 +24,15 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-Route::get('/home', [UserDashboard::class,'userInfo']);
+//Route::get('/home', [UserDashboard::class,'userInfo']);
 
+// Route::prefix('home')->group(function () {
+//     Route::get('/', [UserDashboard::class,'userInfo']);
+// });
 
+Route::middleware(['auth'])->group(function () {
+    Route::get('/home', [UserDashboard::class,'userInfo']);
+
+    Route::get('/education', [UserDashboard::class,'userInfo']);
+});
 require __DIR__.'/auth.php';
