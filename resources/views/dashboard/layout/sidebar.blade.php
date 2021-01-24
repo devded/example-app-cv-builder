@@ -15,31 +15,31 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="pages/forms/basic_elements.html">
+            <a class="nav-link" href="{{ url('/education') }}">
                 <span class="icon-bg"><i class="mdi mdi-school menu-icon"></i></span>
                 <span class="menu-title">Education</span>
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="pages/charts/chartjs.html">
+            <a class="nav-link" href="{{ url('experiece') }}">
                 <span class="icon-bg"><i class="mdi mdi-briefcase menu-icon"></i></span>
                 <span class="menu-title">Experience</span>
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="pages/tables/basic-table.html">
+            <a class="nav-link" href="{{ url('keyskill') }}">
                 <span class="icon-bg"><i class="mdi mdi-table-large menu-icon"></i></span>
                 <span class="menu-title">Key Skills</span>
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="pages/tables/basic-table.html">
+            <a class="nav-link" href="{{ url('tranning') }}">
                 <span class="icon-bg"><i class="mdi mdi-certificate menu-icon"></i></span>
                 <span class="menu-title">Tranning</span>
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="pages/tables/basic-table.html">
+            <a class="nav-link" href="{{ url('achivement') }}">
                 <span class="icon-bg"><i class="mdi mdi-trophy menu-icon"></i></span>
                 <span class="menu-title">Achivement</span>
             </a>
