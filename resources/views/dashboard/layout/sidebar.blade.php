@@ -1,15 +1,15 @@
 <nav class="sidebar sidebar-offcanvas" id="sidebar">
     <ul class="nav">
 
-        <li class="nav-item active">
-            <a class="nav-link" href="#">
+        <li class="nav-item">
+            <a class="nav-link" href="{{ url('home') }}">
                 <span class="icon-bg"><i class="mdi mdi-cube menu-icon"></i></span>
                 <span class="menu-title">Dashboard</span>
             </a>
         </li>
 
         <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="{{ url('summary') }}">
                 <span class="icon-bg"><i class="mdi mdi-view-headline menu-icon"></i></span>
                 <span class="menu-title">Summary</span>
             </a>

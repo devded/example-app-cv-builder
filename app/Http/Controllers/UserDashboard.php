@@ -19,14 +19,33 @@ class UserDashboard extends Controller
             'email'=>$email
         ];
 
-        return view('index',['user'=> $user]);
+        return view('dashboard.overview',['user'=> $user]);
         ///dd($user);
+    }
+
+    public function summaryInfo(){
+        return view('dashboard.summary');
     }
 
 
     public function educationInfo(){
-        return view('')
+        return view('dashboard.education');
     }
 
+    public function experienceInfo(){
+        return view('dashboard.experience');
+    }
+
+    public function keyskillInfo(){
+        return view('dashboard.keyskill');
+    }
+
+    public function tranningInfo(){
+        return view('dashboard.tranning');
+    }
+
+    public function achivementInfo(){
+        return view('dashboard.achivement');
+    }
 
 }

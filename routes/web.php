@@ -32,7 +32,14 @@ Route::get('/dashboard', function () {
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/home', [UserDashboard::class,'userInfo']);
+    Route::get('/summary', [UserDashboard::class,'summaryInfo']);
+    Route::get('/education', [UserDashboard::class,'educationInfo']);
+    Route::get('/experiece', [UserDashboard::class,'experienceInfo']);
 
-    Route::get('/education', [UserDashboard::class,'userInfo']);
+    Route::get('/keyskill', [UserDashboard::class,'keyskillInfo']);
+    Route::get('/tranning', [UserDashboard::class,'tranningInfo']);
+    Route::get('/achivement', [UserDashboard::class,'achivementInfo']);
+
+
 });
 require __DIR__.'/auth.php';
